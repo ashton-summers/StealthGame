@@ -48,6 +48,14 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 			};
 #endif
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsCarryingObjective_MetaData[] = {
+				{ "Category", "Gameplay" },
+				{ "ModuleRelativePath", "Public/FPSCharacter.h" },
+			};
+#endif
+			auto NewProp_bIsCarryingObjective_SetBit = [](void* Obj){ ((AFPSCharacter*)Obj)->bIsCarryingObjective = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsCarryingObjective = { UE4CodeGen_Private::EPropertyClass::Bool, "bIsCarryingObjective", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000014, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AFPSCharacter), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_bIsCarryingObjective_SetBit)>::SetBit, METADATA_PARAMS(NewProp_bIsCarryingObjective_MetaData, ARRAY_COUNT(NewProp_bIsCarryingObjective_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireAnimation_MetaData[] = {
 				{ "Category", "Gameplay" },
 				{ "ModuleRelativePath", "Public/FPSCharacter.h" },
@@ -99,6 +107,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Mesh1PComponent = { UE4CodeGen_Private::EPropertyClass::Object, "Mesh1PComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00200800000a001d, 1, nullptr, STRUCT_OFFSET(AFPSCharacter, Mesh1PComponent), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(NewProp_Mesh1PComponent_MetaData, ARRAY_COUNT(NewProp_Mesh1PComponent_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bIsCarryingObjective,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FireAnimation,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_FireSound,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ProjectileClass,
@@ -124,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSCharacter, 1761975638);
+	IMPLEMENT_CLASS(AFPSCharacter, 3525554611);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AFPSCharacter(Z_Construct_UClass_AFPSCharacter, &AFPSCharacter::StaticClass, TEXT("/Script/FPSGame"), TEXT("AFPSCharacter"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AFPSCharacter);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

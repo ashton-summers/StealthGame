@@ -3,6 +3,8 @@
 #include "FPSObjectiveActor.h"
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "FPSCharacter.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -26,10 +28,35 @@ void AFPSObjectiveActor::BeginPlay()
 	
 }
 
+// Called when the objective is picked up
+void AFPSObjectiveActor::PlayEffects()
+{
+	// Spawn the particle effects at the location of this object.
+	UGameplayStatics::SpawnEmitterAtLocation(this, PickupFX, GetActorLocation());
+}
+
 // Called every frame
 void AFPSObjectiveActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void AFPSObjectiveActor::NotifyActorBeginOverlap(AActor * OtherActor)
+{
+	Super::NotifyActorBeginOverlap(OtherActor);
+	AFPSCharacter* MyCharacter;
+
+	// Play the pickup effect.
+	PlayEffects();
+
+	MyCharacter = Cast<AFPSCharacter>(OtherActor);
+
+	// Cast successful
+	if (MyCharacter)
+	{
+		MyCharacter->bIsCarryingObjective = true;
+		Destroy();
+	}
 }
 

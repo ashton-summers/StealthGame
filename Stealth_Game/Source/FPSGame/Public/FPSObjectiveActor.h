@@ -22,15 +22,26 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	// Called whenever the objective is picked up
+	void PlayEffects();
+
+	/** Mesh for this object **/
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UStaticMeshComponent* MeshComp;
+
+	/** Collision sphere for this object **/
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	USphereComponent* SphereComp;
+
+	/** Particle effects for picking up the objective **/
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
+	UParticleSystem* PickupFX;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
+	// Called every time a pawn overlaps with this.
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 	
 };
