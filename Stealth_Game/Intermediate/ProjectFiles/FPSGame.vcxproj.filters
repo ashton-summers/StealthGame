@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\FPSGame.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{CF8C331E-7C91-404A-853B-84A29B643B30}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\FPSGame.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\FPSGameEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{E8F832D0-74BE-40A1-8053-8B95D3FA73AB}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\FPSGame">
+			<UniqueIdentifier>{A4C35548-A4DD-4D6D-9A6A-7BAC0ED4D9DB}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\FPSGame\FPSGame.Build.cs">
+			<Filter>Source\FPSGame</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\FPSGame\FPSGame.cpp">
+			<Filter>Source\FPSGame</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\FPSGame\FPSGame.h">
+			<Filter>Source\FPSGame</Filter>
+		</ClInclude >
+		<Filter Include="Source\FPSGame\Private">
+			<UniqueIdentifier>{5A29FDED-8FEE-4FFF-87D9-CCB9C7F68800}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\FPSGame\Private\FPSCharacter.cpp">
+			<Filter>Source\FPSGame\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\FPSGame\Private\FPSGameMode.cpp">
+			<Filter>Source\FPSGame\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\FPSGame\Private\FPSHUD.cpp">
+			<Filter>Source\FPSGame\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\FPSGame\Private\FPSObjectiveActor.cpp">
+			<Filter>Source\FPSGame\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\FPSGame\Private\FPSProjectile.cpp">
+			<Filter>Source\FPSGame\Private</Filter>
+		</ClCompile >
+		<Filter Include="Source\FPSGame\Public">
+			<UniqueIdentifier>{A0A8A93C-6FB9-4B53-AF0F-3E4F06563150}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\FPSGame\Public\FPSCharacter.h">
+			<Filter>Source\FPSGame\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\FPSGame\Public\FPSGameMode.h">
+			<Filter>Source\FPSGame\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\FPSGame\Public\FPSHUD.h">
+			<Filter>Source\FPSGame\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\FPSGame\Public\FPSObjectiveActor.h">
+			<Filter>Source\FPSGame\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\FPSGame\Public\FPSProjectile.h">
+			<Filter>Source\FPSGame\Public</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

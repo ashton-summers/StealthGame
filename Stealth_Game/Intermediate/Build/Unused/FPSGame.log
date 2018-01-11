@@ -1,0 +1,15 @@
+﻿  Creating makefile for hot reloading FPSGameEditor (modules to compile have changed)
+  Compiling game modules for hot reload
+  Parsing headers for FPSGameEditor
+    Running UnrealHeaderTool "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\Stealth_Game\FPSGame.uproject" "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\Stealth_Game\Intermediate\Build\Win64\FPSGameEditor\Development\FPSGameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for FPSGameEditor in 6.2024408 seconds
+  Performing 5 actions (4 in parallel)
+  FPSGame.init.gen.cpp
+  FPSObjectiveActor.gen.cpp
+  FPSObjectiveActor.cpp
+  [4/5] Link UE4Editor-FPSGame-8360.dll
+  [5/5] Link UE4Editor-FPSGame-8360.lib
+     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-8360.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-8360.exp
+     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-8360.suppressed.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-8360.suppressed.exp
+  Deploying FPSGameEditor Win64 Development...
+  Total build time: 36.64 seconds (Local executor: 4.93 seconds)
