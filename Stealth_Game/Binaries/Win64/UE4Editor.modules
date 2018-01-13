@@ -2,6 +2,10 @@
 	"BuildId": "3709383",
 	"Modules": 
 	{
+<<<<<<< HEAD
+		"FPSGame": "UE4Editor-FPSGame-7128.dll"
+=======
 		"FPSGame": "UE4Editor-FPSGame-9127.dll"
+>>>>>>> origin
 	}
 }

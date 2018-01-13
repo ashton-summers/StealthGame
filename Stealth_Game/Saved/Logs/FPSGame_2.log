@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+﻿Log file open, 01/12/18 18:38:40
+=======
 ﻿Log file open, 01/11/18 19:03:42
+>>>>>>> origin
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VSPerf140.dll' (GetLastError=126)
@@ -9,12 +13,20 @@ LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
 LogWindows: File 'VtuneApi32e.dll' does not exist
 LogInit: Display: Running engine for game: FPSGame
 LogPlatformFile: Not using cached read wrapper
+<<<<<<< HEAD
+LogInit: Display: RandInit(1033904848) SRandInit(1033904848).
+=======
 LogInit: Display: RandInit(-559001033) SRandInit(-559001033).
+>>>>>>> origin
 LogInit: Read version file with build ID '3709383'
 LogInit: Overriding engine version to CL 3754814, compatible CL 3709383
 LogInit: Registered custom module enumerator with build ID '3709383'
 LogTaskGraph: Started task graph with 5 named threads and 14 total threads with 3 sets of task threads.
+<<<<<<< HEAD
+LogStats: Stats thread started at 0.431257
+=======
 LogStats: Stats thread started at 0.226299
+>>>>>>> origin
 LogD3D11RHI: Aftermath initialized
 LogPluginManager: Mounting plugin Paper2D
 LogPluginManager: Mounting plugin LightPropagationVolume
@@ -77,7 +89,11 @@ LogPluginManager: Mounting plugin ProceduralMeshComponent
 LogPluginManager: Mounting plugin RuntimePhysXCooking
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WindowsMoviePlayer
+<<<<<<< HEAD
+LogModuleManager: Warning: Module file ../../../../../../Users/Ashton Summers/Documents/Code/Unreal Engine/Projects/StealthGame/Stealth_Game/Binaries/Win64/UE4Editor-FPSGame-592.dll is missing. This is likely a stale module that must be recompiled.
+=======
 LogModuleManager: Warning: Module file ../../../../../../Users/Ashton Summers/Documents/Code/Unreal Engine/Projects/StealthGame/Stealth_Game/Binaries/Win64/UE4Editor-FPSGame-2716.dll is missing. This is likely a stale module that must be recompiled.
+>>>>>>> origin
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll (API version 3709383).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2DEditor.dll (API version 3709383).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-PaperSpriteSheetImporter.dll (API version 3709383).
@@ -156,6 +172,19 @@ Running C:/Program Files/Epic Games/UE_4.18/Engine/Binaries/DotNET/UnrealBuildTo
 Using 'git status' to determine working set for adaptive non-unity build.
 @progress push 5%
 @progress pop
+<<<<<<< HEAD
+Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-2319.dll".
+Unable to delete old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-2319.dll". Error: Access to the path 'C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-2319.dll' is denied.
+Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-2319.pdb".
+Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-3837.dll".
+Unable to delete old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-3837.dll". Error: Access to the path 'C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-3837.dll' is denied.
+Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-3837.pdb".
+Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-3961.dll".
+Unable to delete old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-3961.dll". Error: Access to the path 'C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-3961.dll' is denied.
+Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-3961.pdb".
+Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-9918.dll".
+Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-9918.pdb".
+=======
 Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-112.dll".
 Unable to delete old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-112.dll". Error: Access to the path 'C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-112.dll' is denied.
 Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-112.pdb".
@@ -165,12 +194,18 @@ Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Eng
 Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-9276.dll".
 Unable to delete old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-9276.dll". Error: Access to the path 'C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-9276.dll' is denied.
 Deleting old hot reload file: "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame-9276.pdb".
+>>>>>>> origin
 Performing 1 actions (4 in parallel)
 [1/1] Link UE4Editor-FPSGame.dll
 LINK : fatal error LNK1104: cannot open file 'C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame.dll'
 ERROR: UBT ERROR: Failed to produce item: C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\UE4Editor-FPSGame.pdb
+<<<<<<< HEAD
+Total build time: 0.63 seconds (Local executor: 0.00 seconds)
+LogModuleManager: Warning: Module file ../../../../../../Users/Ashton Summers/Documents/Code/Unreal Engine/Projects/StealthGame/Stealth_Game/Binaries/Win64/UE4Editor-FPSGame-592.dll is missing. This is likely a stale module that must be recompiled.
+=======
 Total build time: 0.62 seconds (Local executor: 0.00 seconds)
 LogModuleManager: Warning: Module file ../../../../../../Users/Ashton Summers/Documents/Code/Unreal Engine/Projects/StealthGame/Stealth_Game/Binaries/Win64/UE4Editor-FPSGame-2716.dll is missing. This is likely a stale module that must be recompiled.
+>>>>>>> origin
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2D.dll (API version 3709383).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-Paper2DEditor.dll (API version 3709383).
 LogModuleManager: Display: Found up-to-date module file ../../../Engine/Plugins/2D/Paper2D/Binaries/Win64/UE4Editor-PaperSpriteSheetImporter.dll (API version 3709383).
@@ -266,4 +301,8 @@ LogModuleManager: Shutting down and abandoning module StreamingFile (6)
 LogModuleManager: Shutting down and abandoning module SandboxFile (4)
 LogModuleManager: Shutting down and abandoning module PakFile (2)
 LogExit: Exiting.
+<<<<<<< HEAD
+Log file closed, 01/12/18 18:38:46
+=======
 Log file closed, 01/11/18 19:03:50
+>>>>>>> origin

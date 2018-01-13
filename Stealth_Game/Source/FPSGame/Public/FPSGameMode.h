@@ -11,9 +11,19 @@ class AFPSGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
+protected:
+	UPROPERTY(EditDefaultsOnly, Category = "Spectating")
+	TSubclassOf<AActor> SpectatingViewpointClass;
 public:
 
 	AFPSGameMode();
+
+	// Called when the player pawn enters extraction zone with obj.
+	UFUNCTION(BlueprintImplementableEvent, Category = "GameMode")
+	void MissionCompleted(APawn* pawn);
+
+	void CompleteMission(APawn* InstigatorPawn);
+
 };
 
 
