@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSExtractionZone() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UDecalComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 // End Cross Module References
 	void AFPSExtractionZone::StaticRegisterNativesAFPSExtractionZone()
 	{
@@ -126,9 +127,17 @@ void EmptyLinkFunctionForGeneratedCodeFPSExtractionZone() {}
 			};
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OverlapComp = { UE4CodeGen_Private::EPropertyClass::Object, "OverlapComp", RF_Public|RF_Transient|RF_MarkAsNative, 0x00200800000a0009, 1, nullptr, STRUCT_OFFSET(AFPSExtractionZone, OverlapComp), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(NewProp_OverlapComp_MetaData, ARRAY_COUNT(NewProp_OverlapComp_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ObjectiveMissingSound_MetaData[] = {
+				{ "Category", "Sounds" },
+				{ "ModuleRelativePath", "Public/FPSExtractionZone.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ObjectiveMissingSound = { UE4CodeGen_Private::EPropertyClass::Object, "ObjectiveMissingSound", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000010001, 1, nullptr, STRUCT_OFFSET(AFPSExtractionZone, ObjectiveMissingSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(NewProp_ObjectiveMissingSound_MetaData, ARRAY_COUNT(NewProp_ObjectiveMissingSound_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_DecalComp,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_OverlapComp,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ObjectiveMissingSound,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 				TCppClassTypeTraits<AFPSExtractionZone>::IsAbstract,
@@ -148,7 +157,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSExtractionZone() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSExtractionZone, 2658968945);
+	IMPLEMENT_CLASS(AFPSExtractionZone, 3509419852);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AFPSExtractionZone(Z_Construct_UClass_AFPSExtractionZone, &AFPSExtractionZone::StaticClass, TEXT("/Script/FPSGame"), TEXT("AFPSExtractionZone"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AFPSExtractionZone);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
