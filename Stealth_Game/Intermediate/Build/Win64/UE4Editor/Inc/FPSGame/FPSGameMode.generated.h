@@ -8,6 +8,7 @@
 #include "ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APawn;
 #ifdef FPSGAME_FPSGameMode_generated_h
 #error "FPSGameMode.generated.h already included, missing '#pragma once' in FPSGameMode.h"
 #endif
@@ -15,6 +16,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_RPC_WRAPPERS
 #define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_EVENT_PARMS \
+	struct FPSGameMode_eventMissionCompleted_Parms \
+	{ \
+		APawn* pawn; \
+	};
+
+
+#define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_CALLBACK_WRAPPERS
 #define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSGameMode(); \
@@ -60,12 +69,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFPSGameMode); \
 
 
 #define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_PRIVATE_PROPERTY_OFFSET
-#define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_9_PROLOG
+#define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_9_PROLOG \
+	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_EVENT_PARMS
+
+
 #define Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
 	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_RPC_WRAPPERS \
+	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_CALLBACK_WRAPPERS \
 	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_INCLASS \
 	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_STANDARD_CONSTRUCTORS \
 public: \
@@ -77,6 +90,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
 	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_CALLBACK_WRAPPERS \
 	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_INCLASS_NO_PURE_DECLS \
 	Stealth_Game_Source_FPSGame_Public_FPSGameMode_h_12_ENHANCED_CONSTRUCTORS \
 private: \

@@ -14,6 +14,13 @@ class AFPSGameMode : public AGameModeBase
 public:
 
 	AFPSGameMode();
+
+	// Called when the player pawn enters extraction zone with obj.
+	UFUNCTION(BlueprintImplementableEvent, Category = "GameMode")
+	void MissionCompleted(APawn* pawn);
+
+	void CompleteMission(APawn* InstigatorPawn);
+
 };
 
 

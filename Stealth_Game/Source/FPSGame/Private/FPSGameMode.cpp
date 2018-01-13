@@ -14,3 +14,14 @@ AFPSGameMode::AFPSGameMode()
 	// use our custom HUD class
 	HUDClass = AFPSHUD::StaticClass();
 }
+
+// Called when player pawn enters extraction zone with obj.
+void AFPSGameMode::CompleteMission(APawn* InstigatorPawn)
+{
+	// Disable the pawn input
+	if (InstigatorPawn)
+	{
+		InstigatorPawn->DisableInput(nullptr);
+	}
+	MissionCompleted(InstigatorPawn);
+}

@@ -1,16 +1,17 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
+  Creating makefile for hot reloading FPSGameEditor (modules to compile have changed)
   Compiling game modules for hot reload
-  Performing full C++ include scan (no include cache file)
   Parsing headers for FPSGameEditor
     Running UnrealHeaderTool "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\FPSGame.uproject" "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\FPSGameEditor\Development\FPSGameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for FPSGameEditor in 8.9286237 seconds
-  Performing 5 actions (4 in parallel)
-  FPSObjectiveActor.cpp
+  Reflection code generated for FPSGameEditor in 5.8464081 seconds
+  Performing 6 actions (4 in parallel)
+  FPSExtractionZone.cpp
   FPSGame.init.gen.cpp
-  FPSObjectiveActor.gen.cpp
-  [4/5] Link UE4Editor-FPSGame-2130.dll
-  [5/5] Link UE4Editor-FPSGame-2130.lib
-     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-2130.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-2130.exp
-     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-2130.suppressed.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-2130.suppressed.exp
+  FPSGameMode.cpp
+  FPSGameMode.gen.cpp
+  [5/6] Link UE4Editor-FPSGame-1190.dll
+  [6/6] Link UE4Editor-FPSGame-1190.lib
+     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-1190.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-1190.exp
+     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-1190.suppressed.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-1190.suppressed.exp
   Deploying FPSGameEditor Win64 Development...
-  Total build time: 11.50 seconds (Local executor: 1.31 seconds)
+  Total build time: 11.27 seconds (Local executor: 1.31 seconds)
