@@ -13,8 +13,8 @@ UCLASS()
 class FPSGAME_API AFPSObjectiveActor : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AFPSObjectiveActor();
 
@@ -27,21 +27,21 @@ protected:
 
 	/** Mesh for this object **/
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-	UStaticMeshComponent* MeshComp;
+		UStaticMeshComponent* MeshComp;
 
 	/** Collision sphere for this object **/
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-	USphereComponent* SphereComp;
+		USphereComponent* SphereComp;
 
 	/** Particle effects for picking up the objective **/
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
-	UParticleSystem* PickupFX;
+		UParticleSystem* PickupFX;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called every time a pawn overlaps with this.
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
-	
+
 };

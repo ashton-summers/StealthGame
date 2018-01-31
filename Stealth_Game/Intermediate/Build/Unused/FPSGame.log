@@ -1,27 +1,8 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
-  Compiling game modules for hot reload
-<<<<<<< HEAD
-  Parsing headers for FPSGameEditor
-    Running UnrealHeaderTool "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\FPSGame.uproject" "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\FPSGameEditor\Development\FPSGameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for FPSGameEditor in 6.3914719 seconds
-  Performing 6 actions (4 in parallel)
-  FPSGameMode.cpp
-  FPSGame.init.gen.cpp
-  FPSExtractionZone.cpp
-  FPSGameMode.gen.cpp
-  [5/6] Link UE4Editor-FPSGame-7128.dll
-  [6/6] Link UE4Editor-FPSGame-7128.lib
-     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-7128.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-7128.exp
-     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-7128.suppressed.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-7128.suppressed.exp
-  Deploying FPSGameEditor Win64 Development...
-  Total build time: 8.97 seconds (Local executor: 1.52 seconds)
-=======
-  Performing 3 actions (4 in parallel)
-  FPSBlackHole.cpp
-  [2/3] Link UE4Editor-FPSGame-9127.dll
-  [3/3] Link UE4Editor-FPSGame-9127.lib
-     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-9127.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-9127.exp
-     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-9127.suppressed.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame-9127.suppressed.exp
-  Deploying FPSGameEditor Win64 Development...
-  Total build time: 1.73 seconds (Local executor: 0.91 seconds)
->>>>>>> origin
+  Performing 2 actions (4 in parallel)
+  FPSAIGuard.cpp
+  [2/2] Link FPSGame-Win64-DebugGame.exe
+     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\FPSGame-Win64-DebugGame.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\FPSGame-Win64-DebugGame.exp
+  Deploying FPSGame Win64 DebugGame...
+  Prepping UE4 for deployment to Win64
+  Total build time: 13.15 seconds (Local executor: 12.54 seconds)

@@ -35,7 +35,6 @@ void AFPSGameMode::CompleteMission(APawn* InstigatorPawn)
 			if (ReturnedActors.Num() > 0)
 			{
 				NewViewTarget = ReturnedActors[0];
-				a
 				APlayerController* PC = Cast<APlayerController>(InstigatorPawn->GetController());
 
 				if (PC)
