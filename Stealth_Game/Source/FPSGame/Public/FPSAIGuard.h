@@ -21,8 +21,18 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleAnywhere, Category = "Componens")
-		UPawnSensingComponent* PawnSensingComponent;
+	// Called when the guard sees a pawn.
+	UFUNCTION()
+	void OnPawnSeen(APawn* SeenPawn);
+	
+	// Called when the guard hears a noise.
+	UFUNCTION()
+	void OnNoiseHeard(APawn* NoiseInstigator, const FVector& Location, float Volume);
+
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UPawnSensingComponent* PawnSensingComponent;
+
 
 public:
 	// Called every frame

@@ -28,11 +28,11 @@ protected:
 
 	/** Box component to use as collision detector **/
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-		UBoxComponent* BoxCollisionComp;
+	UBoxComponent* BoxCollisionComp;
 
 	/** The mesh for this object **/
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-		UStaticMeshComponent* MeshComp;
+	UStaticMeshComponent* MeshComp;
 
 
 

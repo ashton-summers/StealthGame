@@ -27,15 +27,15 @@ protected:
 
 	/** Mesh for this object **/
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-		UStaticMeshComponent* MeshComp;
+	UStaticMeshComponent* MeshComp;
 
 	/** Collision sphere for this object **/
 	UPROPERTY(VisibleAnywhere, Category = "Components")
-		USphereComponent* SphereComp;
+	USphereComponent* SphereComp;
 
 	/** Particle effects for picking up the objective **/
 	UPROPERTY(EditDefaultsOnly, Category = "Effects")
-		UParticleSystem* PickupFX;
+	UParticleSystem* PickupFX;
 
 public:
 	// Called every frame
