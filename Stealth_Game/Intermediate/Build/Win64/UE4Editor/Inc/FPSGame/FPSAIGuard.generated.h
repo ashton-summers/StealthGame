@@ -17,6 +17,14 @@ struct FVector;
 
 #define Stealth_Game_Source_FPSGame_Public_FPSAIGuard_h_14_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execResetOrientation) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->ResetOrientation(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execOnNoiseHeard) \
 	{ \
 		P_GET_OBJECT(APawn,Z_Param_NoiseInstigator); \
@@ -39,6 +47,14 @@ struct FVector;
 
 
 #define Stealth_Game_Source_FPSGame_Public_FPSAIGuard_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execResetOrientation) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		this->ResetOrientation(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnNoiseHeard) \
 	{ \

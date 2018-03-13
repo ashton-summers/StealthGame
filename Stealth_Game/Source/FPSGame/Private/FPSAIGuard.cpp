@@ -22,6 +22,7 @@ AFPSAIGuard::AFPSAIGuard()
 void AFPSAIGuard::BeginPlay()
 {
 	Super::BeginPlay();
+	OriginalRotation = GetActorRotation();
 	
 }
 
@@ -40,6 +41,21 @@ void AFPSAIGuard::OnNoiseHeard(APawn* Instigator, const FVector & Location, floa
 {
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("HEARD"));
 	DrawDebugSphere(GetWorld(), Location, 32.f, 12, FColor::Red, false, 10.f);
+	FVector Direction = Location - GetActorLocation();
+	Direction.Normalize();
+	FRotator NewLookAt = FRotationMatrix::MakeFromX(Direction).Rotator();
+	NewLookAt.Pitch = 0.0f;
+	NewLookAt.Roll = 0.0f;
+	SetActorRotation(NewLookAt);
+	FTimerHandle TimerHandle_ResetOrientation;
+	GetWorldTimerManager().ClearTimer(TimerHandle_ResetOrientation);
+	GetWorldTimerManager().SetTimer(TimerHandle_ResetOrientation, this, &AFPSAIGuard::ResetOrientation, 3.0f);
+}
+
+// Resets the orientation of the this class after a set amount of time.
+void AFPSAIGuard::ResetOrientation()
+{
+	SetActorRotation(OriginalRotation);
 }
 
 // Called every frame
