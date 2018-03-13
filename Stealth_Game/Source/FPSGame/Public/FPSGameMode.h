@@ -20,9 +20,9 @@ public:
 
 	// Called when the player pawn enters extraction zone with obj.
 	UFUNCTION(BlueprintImplementableEvent, Category = "GameMode")
-	void MissionCompleted(APawn* pawn);
+	void MissionCompleted(APawn* pawn, bool bMissionSuccess);
 
-	void CompleteMission(APawn* InstigatorPawn);
+	void CompleteMission(APawn* InstigatorPawn, bool bMissionSuccess);
 
 };
 

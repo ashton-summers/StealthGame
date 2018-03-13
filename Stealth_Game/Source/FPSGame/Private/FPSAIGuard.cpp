@@ -5,6 +5,7 @@
 #include "DrawDebugHelpers.h"
 #include "Components/PawnNoiseEmitterComponent.h"
 #include "Engine.h"
+#include "FPSGameMode.h"
 
 // Sets default values
 AFPSAIGuard::AFPSAIGuard()
@@ -34,6 +35,14 @@ void AFPSAIGuard::OnPawnSeen(APawn* SeenPawn)
 		return;
 
 	DrawDebugSphere(GetWorld(), SeenPawn->GetActorLocation(), 32.f, 12, FColor::Yellow, false, 10.f);
+
+	AFPSGameMode* GM = Cast<AFPSGameMode>(GetWorld()->GetAuthGameMode());
+
+	// Notify game mode that mission has been completed
+	if (GM)
+	{
+		GM->CompleteMission(SeenPawn, false);
+	}
 }
 
 // Called when this class hears a noise 
