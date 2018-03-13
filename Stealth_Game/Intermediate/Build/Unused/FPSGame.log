@@ -1,13 +1,6 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build.
-  Performing 3 actions (4 in parallel)
-EXEC : error : Failed to start local process for action: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64\cl.exe  @"C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\FPSGame\DebugGame\FPSGame\FPSProjectile.cpp.obj.response"
-EXEC : error : Failed to start local process for action: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.25017\bin\HostX64\x64\cl.exe  @"C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\FPSGame\DebugGame\FPSGame\FPSCharacter.cpp.obj.response"
-EXEC : error : System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
-            at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
-            at UnrealBuildTool.ActionThread.ThreadFunc()
-EXEC : error : System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
-            at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
-            at UnrealBuildTool.ActionThread.ThreadFunc()
-ERROR : UBT error : Failed to produce item: C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win64\FPSGame-Win64-DebugGame.pdb
-  Total build time: 0.59 seconds (Local executor: 0.00 seconds)
-C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(44,5): error MSB3075: The command ""C:\Program Files\Epic Games\UE_4.18\Engine\Build\BatchFiles\Build.bat" FPSGame Win64 DebugGame "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\FPSGame.uproject" -waitmutex" exited with code 5. Please verify that you have sufficient rights to run this command.
+﻿  Performing full C++ include scan (building a new target)
+  Using 'git status' to determine working set for adaptive non-unity build.
+  Target is up to date
+  Deploying FPSGame Win32 Development...
+  Prepping UE4 for deployment to Win32
+  Total build time: 1.05 seconds (NoActionsToExecute executor: 0.00 seconds)
