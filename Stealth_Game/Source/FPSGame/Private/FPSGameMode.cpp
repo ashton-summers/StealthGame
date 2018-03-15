@@ -17,7 +17,7 @@ AFPSGameMode::AFPSGameMode()
 }
 
 // Called when player pawn enters extraction zone with obj.
-void AFPSGameMode::CompleteMission(APawn* InstigatorPawn)
+void AFPSGameMode::CompleteMission(APawn* InstigatorPawn, bool bMissionSuccess)
 {
 
 	if (InstigatorPawn)
@@ -49,6 +49,5 @@ void AFPSGameMode::CompleteMission(APawn* InstigatorPawn)
 		}
 	}
 
-	MissionCompleted(InstigatorPawn);
-
+	MissionCompleted(InstigatorPawn, bMissionSuccess);
 }
