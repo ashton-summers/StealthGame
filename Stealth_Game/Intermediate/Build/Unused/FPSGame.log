@@ -1,9 +1,13 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
-  Performing 3 actions (4 in parallel)
-  FPSGameMode.cpp
+  Parsing headers for FPSGame
+    Running UnrealHeaderTool "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\FPSGame.uproject" "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win32\FPSGame\Development\FPSGame.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for FPSGame in 4.6506615 seconds
+  Performing 4 actions (4 in parallel)
   FPSAIGuard.cpp
-  [3/3] Link FPSGame.exe
+  FPSAIGuard.gen.cpp
+  FPSGame.init.gen.cpp
+  [4/4] Link FPSGame.exe
      Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win32\FPSGame.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win32\FPSGame.exp
   Deploying FPSGame Win32 Development...
   Prepping UE4 for deployment to Win32
-  Total build time: 13.40 seconds (Local executor: 12.84 seconds)
+  Total build time: 21.42 seconds (Local executor: 16.05 seconds)
