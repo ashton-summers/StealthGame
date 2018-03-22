@@ -18,6 +18,9 @@ void EmptyLinkFunctionForGeneratedCodeFPSAIGuard() {}
 	FPSGAME_API UClass* Z_Construct_UClass_AFPSAIGuard_NoRegister();
 	FPSGAME_API UClass* Z_Construct_UClass_AFPSAIGuard();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	FPSGAME_API UFunction* Z_Construct_UFunction_AFPSAIGuard_GetRandomPatrolPoint();
+	ENGINE_API UClass* Z_Construct_UClass_ATargetPoint_NoRegister();
+	FPSGAME_API UFunction* Z_Construct_UFunction_AFPSAIGuard_GoToPatrolPoint();
 	FPSGAME_API UFunction* Z_Construct_UFunction_AFPSAIGuard_OnNoiseHeard();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
@@ -85,11 +88,53 @@ void EmptyLinkFunctionForGeneratedCodeFPSAIGuard() {}
 	{
 		UClass* Class = AFPSAIGuard::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetRandomPatrolPoint", (Native)&AFPSAIGuard::execGetRandomPatrolPoint },
+			{ "GoToPatrolPoint", (Native)&AFPSAIGuard::execGoToPatrolPoint },
 			{ "OnNoiseHeard", (Native)&AFPSAIGuard::execOnNoiseHeard },
 			{ "OnPawnSeen", (Native)&AFPSAIGuard::execOnPawnSeen },
 			{ "ResetOrientation", (Native)&AFPSAIGuard::execResetOrientation },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	UFunction* Z_Construct_UFunction_AFPSAIGuard_GetRandomPatrolPoint()
+	{
+		struct FPSAIGuard_eventGetRandomPatrolPoint_Parms
+		{
+			ATargetPoint* ReturnValue;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Object, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, STRUCT_OFFSET(FPSAIGuard_eventGetRandomPatrolPoint_Parms, ReturnValue), Z_Construct_UClass_ATargetPoint_NoRegister, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "Public/FPSAIGuard.h" },
+				{ "ToolTip", "Gets a random target point (aka the waypoint) for the guard to go to\n@return nothing" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSAIGuard, "GetRandomPatrolPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, sizeof(FPSAIGuard_eventGetRandomPatrolPoint_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AFPSAIGuard_GoToPatrolPoint()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "Public/FPSAIGuard.h" },
+				{ "ToolTip", "Go to a patrol (target) point that is placed in the world\n@return nothing" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AFPSAIGuard, "GoToPatrolPoint", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00080401, 0, nullptr, 0, 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UFunction* Z_Construct_UFunction_AFPSAIGuard_OnNoiseHeard()
 	{
@@ -201,6 +246,8 @@ void EmptyLinkFunctionForGeneratedCodeFPSAIGuard() {}
 				(UObject* (*)())Z_Construct_UPackage__Script_FPSGame,
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
+				{ &Z_Construct_UFunction_AFPSAIGuard_GetRandomPatrolPoint, "GetRandomPatrolPoint" }, // 2466263913
+				{ &Z_Construct_UFunction_AFPSAIGuard_GoToPatrolPoint, "GoToPatrolPoint" }, // 1578971089
 				{ &Z_Construct_UFunction_AFPSAIGuard_OnNoiseHeard, "OnNoiseHeard" }, // 202710706
 				{ &Z_Construct_UFunction_AFPSAIGuard_OnPawnSeen, "OnPawnSeen" }, // 2943045017
 				{ &Z_Construct_UFunction_AFPSAIGuard_OnStateChanged, "OnStateChanged" }, // 3626097018
@@ -214,6 +261,14 @@ void EmptyLinkFunctionForGeneratedCodeFPSAIGuard() {}
 			};
 #endif
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bShouldPatrol_MetaData[] = {
+				{ "Category", "AIProperties" },
+				{ "ModuleRelativePath", "Public/FPSAIGuard.h" },
+			};
+#endif
+			auto NewProp_bShouldPatrol_SetBit = [](void* Obj){ ((AFPSAIGuard*)Obj)->bShouldPatrol = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bShouldPatrol = { UE4CodeGen_Private::EPropertyClass::Bool, "bShouldPatrol", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000001, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AFPSAIGuard), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_bShouldPatrol_SetBit)>::SetBit, METADATA_PARAMS(NewProp_bShouldPatrol_MetaData, ARRAY_COUNT(NewProp_bShouldPatrol_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PawnSensingComponent_MetaData[] = {
 				{ "Category", "Components" },
 				{ "EditInline", "true" },
@@ -222,6 +277,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSAIGuard() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PawnSensingComponent = { UE4CodeGen_Private::EPropertyClass::Object, "PawnSensingComponent", RF_Public|RF_Transient|RF_MarkAsNative, 0x00200800000a0009, 1, nullptr, STRUCT_OFFSET(AFPSAIGuard, PawnSensingComponent), Z_Construct_UClass_UPawnSensingComponent_NoRegister, METADATA_PARAMS(NewProp_PawnSensingComponent_MetaData, ARRAY_COUNT(NewProp_PawnSensingComponent_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bShouldPatrol,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_PawnSensingComponent,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -242,7 +298,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSAIGuard() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSAIGuard, 3494998916);
+	IMPLEMENT_CLASS(AFPSAIGuard, 1841228338);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AFPSAIGuard(Z_Construct_UClass_AFPSAIGuard, &AFPSAIGuard::StaticClass, TEXT("/Script/FPSGame"), TEXT("AFPSAIGuard"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AFPSAIGuard);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

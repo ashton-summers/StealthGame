@@ -6,6 +6,8 @@
 #include "Components/PawnNoiseEmitterComponent.h"
 #include "Engine.h"
 #include "FPSGameMode.h"
+#include "Runtime/Engine/Classes/AI/Navigation/NavigationSystem.h"
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 
 // Sets default values
 AFPSAIGuard::AFPSAIGuard()
@@ -25,6 +27,10 @@ void AFPSAIGuard::BeginPlay()
 {
 	Super::BeginPlay();
 	OriginalRotation = GetActorRotation();
+
+	// Get all target points in the world for patrolling.
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATargetPoint::StaticClass(), PatrolPoints);
+	GoToPatrolPoint();
 	
 }
 
@@ -83,6 +89,25 @@ void AFPSAIGuard::ResetOrientation()
 	}
 	SetActorRotation(OriginalRotation);
 	SetGuardState(EAIState::Idle);
+}
+
+/**
+* Go to a patrol (target) point that is placed in the world
+* @return nothing
+*/
+void AFPSAIGuard::GoToPatrolPoint()
+{
+	UNavigationSystem::SimpleMoveToActor(GetController(), GetRandomPatrolPoint());
+}
+
+/**
+* Gets a random target point (aka the waypoint) for the guard to go to
+* @return nothing
+*/
+ATargetPoint* AFPSAIGuard::GetRandomPatrolPoint()
+{
+	auto index = FMath::RandRange(0, PatrolPoints.Num() - 1);
+	return Cast<ATargetPoint>(PatrolPoints[index]);
 }
 
 void AFPSAIGuard::SetGuardState(EAIState NewState)
