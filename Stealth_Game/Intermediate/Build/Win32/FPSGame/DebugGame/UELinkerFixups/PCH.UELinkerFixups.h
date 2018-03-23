@@ -1,0 +1,2 @@
+// PCH for C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win32\UE4\DebugGame\UELinkerFixupsName.h
+#include "C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win32\UE4\DebugGame\UELinkerFixupsName.h"

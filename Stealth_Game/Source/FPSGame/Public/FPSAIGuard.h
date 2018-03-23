@@ -75,6 +75,7 @@ private:
 	FRotator OriginalRotation;
 	EAIState GuardState;
 	TArray<AActor*> PatrolPoints;
+	AActor* CurrentPatrolPoint;
 
 
 public:

@@ -1,8 +1,8 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build.
-  Performing 2 actions (4 in parallel)
+  Performing 3 actions (4 in parallel)
   FPSAIGuard.cpp
-  [2/2] Link FPSGame.exe
-     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win32\FPSGame.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Binaries\Win32\FPSGame.exp
-  Deploying FPSGame Win32 Development...
-  Prepping UE4 for deployment to Win32
-  Total build time: 14.26 seconds (Local executor: 13.65 seconds)
+  [2/3] Link UE4Editor-FPSGame.dll
+  [3/3] Link UE4Editor-FPSGame.lib
+     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame.exp
+     Creating library C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame.suppressed.lib and object C:\Users\Ashton Summers\Documents\Code\Unreal Engine\Projects\StealthGame\Stealth_Game\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-FPSGame.suppressed.exp
+  Total build time: 9.18 seconds (Local executor: 8.34 seconds)
