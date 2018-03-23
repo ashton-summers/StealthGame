@@ -6,6 +6,8 @@
 #include "Components/PawnNoiseEmitterComponent.h"
 #include "Engine.h"
 #include "FPSGameMode.h"
+#include "Runtime/Engine/Classes/AI/Navigation/NavigationSystem.h"
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 
 // Sets default values
 AFPSAIGuard::AFPSAIGuard()
@@ -25,6 +27,14 @@ void AFPSAIGuard::BeginPlay()
 {
 	Super::BeginPlay();
 	OriginalRotation = GetActorRotation();
+
+	// Get all target points in the world for patrolling.
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ATargetPoint::StaticClass(), PatrolPoints);
+
+	if (bShouldPatrol)
+	{
+		GoToPatrolPoint();
+	}
 	
 }
 
@@ -70,6 +80,9 @@ void AFPSAIGuard::OnNoiseHeard(APawn* Instigator, const FVector & Location, floa
 	FTimerHandle TimerHandle_ResetOrientation;
 	GetWorldTimerManager().ClearTimer(TimerHandle_ResetOrientation);
 	GetWorldTimerManager().SetTimer(TimerHandle_ResetOrientation, this, &AFPSAIGuard::ResetOrientation, 3.0f);
+	
+	// Stop the patrolling 
+	GetController()->StopMovement();
 
 	SetGuardState(EAIState::Suspicious);
 }
@@ -81,8 +94,32 @@ void AFPSAIGuard::ResetOrientation()
 	{
 		return;
 	}
+
+	// Reset the actor orientation and continue moving to the current waypoint.
+	UNavigationSystem::SimpleMoveToActor(GetController(), CurrentPatrolPoint);
 	SetActorRotation(OriginalRotation);
 	SetGuardState(EAIState::Idle);
+}
+
+/**
+* Go to a patrol (target) point that is placed in the world
+* @return nothing
+*/
+void AFPSAIGuard::GoToPatrolPoint()
+{
+	AActor* PatrolPoint = GetRandomPatrolPoint();
+	CurrentPatrolPoint = PatrolPoint;
+	UNavigationSystem::SimpleMoveToActor(GetController(), PatrolPoint);
+}
+
+/**
+* Gets a random target point (aka the waypoint) for the guard to go to
+* @return nothing
+*/
+ATargetPoint* AFPSAIGuard::GetRandomPatrolPoint()
+{
+	auto index = FMath::RandRange(0, PatrolPoints.Num() - 1);
+	return Cast<ATargetPoint>(PatrolPoints[index]);
 }
 
 void AFPSAIGuard::SetGuardState(EAIState NewState)
@@ -91,7 +128,7 @@ void AFPSAIGuard::SetGuardState(EAIState NewState)
 	{
 		return;
 	}
-
+	
 	GuardState = NewState;
 	OnStateChanged(GuardState);
 }
@@ -101,6 +138,18 @@ void AFPSAIGuard::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	FVector GuardLocation = GetActorLocation();
+	FVector PatrolPointLocation = CurrentPatrolPoint->GetActorLocation();
+	FVector Delta = GuardLocation - PatrolPointLocation;
+
+	float Distance = Delta.Size();
+	UE_LOG(LogTemp, Warning, TEXT("%lf"), Distance);
+	// Go to new patrol point if the guard is within 50 units
+	// of the current patrol point
+	if (Distance < 65 && bShouldPatrol)
+	{
+		GoToPatrolPoint();
+	}
 }
 
 
