@@ -144,9 +144,9 @@ void AFPSAIGuard::Tick(float DeltaTime)
 
 	float Distance = Delta.Size();
 	UE_LOG(LogTemp, Warning, TEXT("%lf"), Distance);
-	// Go to new patrol point if the guard is within 50 units
+	// Go to new patrol point if the guard is within 65 units
 	// of the current patrol point
-	if (Distance < 65 && bShouldPatrol)
+	if (Distance < 65)
 	{
 		GoToPatrolPoint();
 	}

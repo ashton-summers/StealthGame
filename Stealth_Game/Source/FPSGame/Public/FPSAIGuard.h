@@ -67,7 +67,7 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UPawnSensingComponent* PawnSensingComponent;
 
-	UPROPERTY(EditAnywhere, Category = "AIProperties")
+	UPROPERTY(EditInstanceOnly, Category = "AIProperties")
 	bool bShouldPatrol;
 
 private:
