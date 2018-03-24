@@ -267,7 +267,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSAIGuard() {}
 			};
 #endif
 			auto NewProp_bShouldPatrol_SetBit = [](void* Obj){ ((AFPSAIGuard*)Obj)->bShouldPatrol = 1; };
-			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bShouldPatrol = { UE4CodeGen_Private::EPropertyClass::Bool, "bShouldPatrol", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000001, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AFPSAIGuard), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_bShouldPatrol_SetBit)>::SetBit, METADATA_PARAMS(NewProp_bShouldPatrol_MetaData, ARRAY_COUNT(NewProp_bShouldPatrol_MetaData)) };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bShouldPatrol = { UE4CodeGen_Private::EPropertyClass::Bool, "bShouldPatrol", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000801, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(AFPSAIGuard), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_bShouldPatrol_SetBit)>::SetBit, METADATA_PARAMS(NewProp_bShouldPatrol_MetaData, ARRAY_COUNT(NewProp_bShouldPatrol_MetaData)) };
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PawnSensingComponent_MetaData[] = {
 				{ "Category", "Components" },
@@ -298,7 +298,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSAIGuard() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSAIGuard, 1841228338);
+	IMPLEMENT_CLASS(AFPSAIGuard, 3442613202);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AFPSAIGuard(Z_Construct_UClass_AFPSAIGuard, &AFPSAIGuard::StaticClass, TEXT("/Script/FPSGame"), TEXT("AFPSAIGuard"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AFPSAIGuard);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
